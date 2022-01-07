@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "fd7839f2-bfee-4151-8a1a-5bda5ec7ceef",
+		"name": "Toddle_Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Khushwant\",\r\n    \"password\": \"abscdsassd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://toddlef322.herokuapp.com/api/login",
+					"protocol": "https",
+					"host": [
+						"toddlef322",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "Login"
+			},
+			"response": []
+		},
+		{
+			"name": "Create survey",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0MTU0NzQ3MCwiZXhwIjoxNjQxNjMzODcwfQ.d7TIFBK3TJaljLbwJUoU7pjcV2rssIrKmAZvpY9a5kQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"surveyname\":\"Toddle task\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://toddlef322.herokuapp.com/api/survey/create",
+					"protocol": "https",
+					"host": [
+						"toddlef322",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"survey",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add questions",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0MTU0NzQ3MCwiZXhwIjoxNjQxNjMzODcwfQ.d7TIFBK3TJaljLbwJUoU7pjcV2rssIrKmAZvpY9a5kQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\": \"Do you love dog ?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://toddlef322.herokuapp.com/api/survey/add/1",
+					"protocol": "https",
+					"host": [
+						"toddlef322",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"survey",
+						"add",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Take survey",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0MTU0NzQ3MCwiZXhwIjoxNjQxNjMzODcwfQ.d7TIFBK3TJaljLbwJUoU7pjcV2rssIrKmAZvpY9a5kQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://toddlef322.herokuapp.com/api/survey/takesurvey/1",
+					"protocol": "https",
+					"host": [
+						"toddlef322",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"survey",
+						"takesurvey",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Answer survey",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0MTU0NzQ3MCwiZXhwIjoxNjQxNjMzODcwfQ.d7TIFBK3TJaljLbwJUoU7pjcV2rssIrKmAZvpY9a5kQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": [\r\n        {\r\n            \"questionId\": \"1\",\r\n            \"ans\": \"true\"\r\n        },\r\n        {\r\n            \"questionId\": \"2\",\r\n            \"ans\": \"true\"\r\n        },\r\n        {\r\n            \"questionId\": \"3\",\r\n            \"ans\": \"true\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://toddlef322.herokuapp.com/api/survey/ans/1",
+					"protocol": "https",
+					"host": [
+						"toddlef322",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"survey",
+						"ans",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View survey results",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY0MTU0NzQ3MCwiZXhwIjoxNjQxNjMzODcwfQ.d7TIFBK3TJaljLbwJUoU7pjcV2rssIrKmAZvpY9a5kQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://toddlef322.herokuapp.com/api/survey/viewResults/1",
+					"protocol": "https",
+					"host": [
+						"toddlef322",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"survey",
+						"viewResults",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Image resizing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\": \"https://i0.wp.com/hindiscitech.com/wp-content/uploads/2020/09/image_7g6-1yOh_gY.png?w=1280&ssl=1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://toddlef322.herokuapp.com/api/imgrs/resize",
+					"protocol": "https",
+					"host": [
+						"toddlef322",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"imgrs",
+						"resize"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
