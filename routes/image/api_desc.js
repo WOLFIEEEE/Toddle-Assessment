@@ -12,7 +12,7 @@ exports.resize = async(req, res, next) => {
             try {
                 sharp(buffer).resize(50, 50).jpeg({ quality: 50 }).toFile('./img/image_thumb.jpeg');
                 res.status(200)
-                    .send(`Original Image ${req.body.url}  <br> Image resized https://toddlef322.herokuapp.com/image_thumb.jpeg`);
+                    .send(`Original Image :- ${req.body.url}  </br> Image resized https://toddlef322.herokuapp.com/image_thumb.jpeg`);
 
             } catch (error) {
                 console.log(error);
