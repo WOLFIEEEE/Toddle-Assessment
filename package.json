@@ -1,0 +1,41 @@
+{
+  "name": "toddle-assessment",
+  "version": "1.0.0",
+  "description": "A toddle Backend-assessment build using node js and express with authentication using jwt.",
+  "main": "database.js",
+  "scripts": {
+    "start": "node start.js",
+    "generate": "node generatekey.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WOLFIEEEE/Toddle-Assessment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WOLFIEEEE/Toddle-Assessment/issues"
+  },
+  "homepage": "https://github.com/WOLFIEEEE/Toddle-Assessment#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "node-fetch": "^2.6.1",
+    "path": "^0.12.7",
+    "sharp": "^0.26.1",
+    "sqlite3": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "v12.10.0",
+    "npm": "6.10.3"
+  }
+}
